@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {  font-family: "Inter", sans-serif;}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.btn-1 {
+    background-color: rgb(65, 136, 250);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    border: none;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+nav > ul > li {
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+header {background: radial-gradient(56.99999999999999% 63% at 50% -27.200000000000003%,#bcf682 0%,rgb(85,225,221) 21.405194256756758%,rgb(0,100,158) 42.80862894144144%,var(--token-dded8cf1-7dcd-4887-bb8e-4b020496542d, rgb(2, 8, 22)) 100%);
+padding:4rem ;}
+
+header {display: flex; align-items: center; justify-content: space-evenly;}
+
+
+header > .header_titles > h1 {
+    font-size: 3.5rem;
+}
+
+header > .header_titles > p {
+    font-size: 1.5rem;
+    color: darkgray;
+}
+
+header > .header-buttons > .btn-1 {
+    margin-right: 2rem;
+}
+
+
+.images {position: relative;}
+
+
+.images > img:nth-child(1) {
+    width: 400px;
+}
