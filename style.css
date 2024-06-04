@@ -16,10 +16,29 @@ body {
     border: none;
 }
 
+.btn-2 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: rgb(107, 107, 107);
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    border: none;
+}
+
+button {
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-8px);
+}
+
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2rem;
     align-items: center;
     background-color: black;
 }
@@ -40,7 +59,9 @@ header {background: radial-gradient(56.99999999999999% 63% at 50% -27.2000000000
 padding:4rem ;}
 
 header {display: flex; align-items: center; justify-content: space-evenly;}
-
+header .header_titles {
+    animation: slideInRight 1s ease 0.2s 1 normal both;
+}
 
 header > .header_titles > h1 {
     font-size: 3.5rem;
@@ -51,7 +72,7 @@ header > .header_titles > p {
     color: darkgray;
 }
 
-header > .header-buttons > .btn-1 {
+header > .header_titles > .header-buttons > .btn-1 {
     margin-right: 2rem;
 }
 
@@ -60,5 +81,34 @@ header > .header-buttons > .btn-1 {
 
 
 .images > img:nth-child(1) {
+    animation: slideInLeft 1s ease 0s 1 normal both;
     width: 400px;
+}
+
+@media screen {
+    
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
 }
