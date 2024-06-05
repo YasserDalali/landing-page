@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-* {  font-family: "Inter", sans-serif;}
+
+* {
+    font-family: "Inter", sans-serif;
+}
 
 body {
+    overflow-x: hidden;
     background-color: black;
     color: white;
+
 }
 
 .btn-1 {
@@ -30,12 +35,15 @@ button {
     transition: transform 0.3s ease;
 }
 
-button:hover {
+.header-buttons > button:hover {
     transform: translateY(-8px);
 }
 
 
 nav {
+    z-index: 1;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -43,50 +51,139 @@ nav {
     background-color: black;
 }
 
-nav > ul {
+nav>ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: center;
 }
 
-nav > ul > li {
+nav>ul>li {
     cursor: pointer;
     margin-left: 2rem;
 }
 
-header {background: radial-gradient(56.99999999999999% 63% at 50% -27.200000000000003%,#bcf682 0%,rgb(85,225,221) 21.405194256756758%,rgb(0,100,158) 42.80862894144144%,var(--token-dded8cf1-7dcd-4887-bb8e-4b020496542d, rgb(2, 8, 22)) 100%);
-padding:4rem ;}
+.header-1 {
+    background: radial-gradient(56.99999999999999% 63% at 50% -27.200000000000003%, #bcf682 0%, rgb(85, 225, 221) 21.405194256756758%, rgb(0, 100, 158) 42.80862894144144%, var(--token-dded8cf1-7dcd-4887-bb8e-4b020496542d, rgb(2, 8, 22)) 100%);
+}
 
-header {display: flex; align-items: center; justify-content: space-evenly;}
+header {
+    padding: 10rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 header .header_titles {
     animation: slideInRight 1s ease 0.2s 1 normal both;
 }
 
-header > .header_titles > h1 {
+.header_titles>h1 {
     font-size: 3.5rem;
 }
 
-header > .header_titles > p {
+.header_titles>p {
     font-size: 1.5rem;
     color: darkgray;
 }
 
-header > .header_titles > .header-buttons > .btn-1 {
+.header_titles>.header-buttons>.btn-1 {
     margin-right: 2rem;
 }
 
 
-.images {position: relative;}
+.images {
+    position: relative;
+}
 
 
-.images > img:nth-child(1) {
+.images>img:nth-child(1) {
     animation: slideInLeft 1s ease 0s 1 normal both;
     width: 400px;
 }
 
-@media screen {
-    
+.sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 16rem;
+}
+
+.sponsors p {
+    font-size: 1.7rem;
+    color: rgb(115, 208, 185);
+    font-weight: bold;
+    animation: slideInTop 1s ease 0s 1 normal both;
+
+}
+
+.sponsors-logos {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    animation: slideInTop 1s ease 0s 1 normal both;
+
+}
+
+.sponsors-logos img {
+    width: 160px;
+}
+
+.header-2>.images>img {
+    width: 370px;
+}
+
+.header-2>.header_titles>h1 {
+    font-size: 3.5rem;
+}
+
+.header-2>.header_titles>p {
+    width: 50%;
+    font-size: 1rem;
+    color: darkgray;
+}
+
+
+.header-list>ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header-list>ul>li {
+    margin-top: 2rem;
+}
+
+.header-list>ul>li>i {
+    margin-right: 2rem;
+    color: rgb(115, 208, 185);
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .images {
+        display: none
+    }
+
+    header>.header_titles>p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    nav>ul>li {
+        display: none;
+    }
+
+    nav>ul>li:last-child {
+        display: block;
+    }
+
+    header>.header_titles>.header-buttons>.btn-1 {
+        margin-bottom: 10px;
+    }
 }
 
 @keyframes slideInLeft {
@@ -94,10 +191,24 @@ header > .header_titles > .header-buttons > .btn-1 {
         opacity: 0;
         transform: translateX(100%);
     }
+
     to {
         opacity: 1;
 
         transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
     }
 }
 
@@ -106,6 +217,7 @@ header > .header_titles > .header-buttons > .btn-1 {
         opacity: 0;
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
 
